@@ -13,7 +13,9 @@
 $color1: white;
 $color2: black;
 $color3: #4389bf;
-$color4: #f8f8f8;
+$color4: #fdfdfd;
+$color5: #3e3e3e;
+$color6: #1a1a1a;
 
 #content {
   background-color: $color4;
@@ -23,10 +25,6 @@ $color4: #f8f8f8;
   @include border(1);
   color: $color2;
   margin: marge(20);
-}
-details {
-  margin: marge(20);
-  cursor: pointer;
 }
 progress {
   -webkit-appearance: none;
@@ -45,4 +43,41 @@ progress::-webkit-progress-value {
   background-color: $color3;
   border-radius: 20px 0 0 20px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+details {
+  width: 400px;
+  margin: marge(20);
+  font-family: Arial;
+  border-radius: 5px;
+  overflow: hidden;
+  transform-origin: top center;
+  transform: rotate(0.1deg);
+  transition: all 0.3s;
+}
+details[open] {
+  transition: all 0.6s;
+  min-height: 0px;
+  max-height: 800px;
+  height: auto;
+}
+details summary {
+  width: calc(100% - 40px);
+  height: 45px;
+  line-height: 45px;
+  background-color: $color5;
+  color: $color1;
+  padding: 0 20px;
+  cursor: pointer;
+}
+details div {
+  width: calc(100% - 40px);
+  min-height: 100px;
+  max-height: 800px;
+  height: auto;
+  display: block;
+  background-color: $color6;
+  color: $color1;
+  padding: 5px 20px;
+  cursor: default;
+  margin: 0;
 }

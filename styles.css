@@ -71,4 +71,8 @@ details div {
   margin: 0;
 }
 
+input[type=button] {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

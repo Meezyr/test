@@ -27,11 +27,14 @@
     <br><br>
     <dialog open>
         <p>Ceci est une boite de dialogue</p>
+        <input type="button" value="OK">
     </dialog>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            //console.log("OK");
+            $("input[type=button]").click(function() {
+                $("dialog").removeAttr("open");
+            });
         });
         $("#progress").mousemove(function() {
             var pourcentage = $("#progress").val();

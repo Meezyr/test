@@ -1,0 +1,29 @@
+@function marge($number) {
+  @if $number == 0 {
+    @return $number;
+  } @else {
+    @return $number+px+' '+0+' '+$number+px+' '+0;
+  }
+}
+
+@mixin border($size) {
+  border: $size+px solid white;
+}
+
+$color: lightgray;
+
+#content {
+  background-color: $color;
+  margin: marge(50);
+}
+.text {
+  @include border(10);
+  color: $color;
+  background-color: black;
+  margin: marge(0);
+}
+details {
+  margin: 20px;
+  background-color: white;
+  cursor: pointer;
+}

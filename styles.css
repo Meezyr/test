@@ -1,0 +1,19 @@
+#content {
+  background-color: lightgray;
+  margin: 50px 0 50px 0;
+}
+
+.text {
+  border: 10px solid white;
+  color: lightgray;
+  background-color: black;
+  margin: 0;
+}
+
+details {
+  margin: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

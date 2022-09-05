@@ -1,19 +1,37 @@
 #content {
-  background-color: lightgray;
+  background-color: #f8f8f8;
   margin: 50px 0 50px 0;
 }
 
 .text {
   border: 10px solid white;
-  color: lightgray;
-  background-color: black;
+  color: black;
   margin: 0;
 }
 
 details {
   margin: 20px;
-  background-color: white;
   cursor: pointer;
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 250px;
+  height: 20px;
+  margin: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+progress::-webkit-progress-value {
+  background-color: #4389bf;
+  border-radius: 20px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

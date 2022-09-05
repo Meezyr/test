@@ -7,23 +7,41 @@
 }
 
 @mixin border($size) {
-  border: $size+px solid white;
+  border: $size+px solid $color1;
 }
 
-$color: lightgray;
+$color1: white;
+$color2: black;
+$color3: #4389bf;
+$color4: #f8f8f8;
 
 #content {
-  background-color: $color;
+  background-color: $color4;
   margin: marge(50);
 }
 .text {
   @include border(10);
-  color: $color;
-  background-color: black;
+  color: $color2;
   margin: marge(0);
 }
 details {
   margin: 20px;
-  background-color: white;
   cursor: pointer;
+}
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 250px;
+  height: 20px;
+  margin: 20px;
+}
+progress::-webkit-progress-bar {
+  background-color: $color1;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+progress::-webkit-progress-value {
+  background-color: $color3;
+  border-radius: 20px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }

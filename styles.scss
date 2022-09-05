@@ -2,12 +2,12 @@
   @if $number == 0 {
     @return $number;
   } @else {
-    @return $number+px+' '+0+' '+$number+px+' '+0;
+    @return $number+px+' '+$number+px+' '+$number+px+' '+$number+px;
   }
 }
 
 @mixin border($size) {
-  border: $size+px solid $color1;
+  border: $size+px solid $color2;
 }
 
 $color1: white;
@@ -20,12 +20,12 @@ $color4: #f8f8f8;
   margin: marge(50);
 }
 .text {
-  @include border(10);
+  @include border(1);
   color: $color2;
-  margin: marge(0);
+  margin: marge(20);
 }
 details {
-  margin: 20px;
+  margin: marge(20);
   cursor: pointer;
 }
 progress {
@@ -33,15 +33,16 @@ progress {
   appearance: none;
   width: 250px;
   height: 20px;
-  margin: 20px;
+  margin: marge(20);
 }
 progress::-webkit-progress-bar {
   background-color: $color1;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 progress::-webkit-progress-value {
   background-color: $color3;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }

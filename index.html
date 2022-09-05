@@ -8,7 +8,8 @@
 <body id="content">
     <p class="text">Hello world !!</p>
     <br><br>
-    <progress value="70" max="100"></progress>
+    <input type="range" name="progress" id="progress" min="0" max="100" value="50">
+    <progress value="50" max="100"></progress>
     <br><br>
     <details>
         <summary>Element déroulant</summary>
@@ -16,7 +17,21 @@
     </details>
     <br><br>
     <dialog open>
-        <p>C'est une boite de dialogue</p>
+        <p>Ceci est une boite de dialogue</p>
     </dialog>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            //console.log("OK");
+        });
+        $("#progress").mousemove(function() {
+            var pourcentage = $("#progress").val();
+            $("progress").val(pourcentage);
+        });
+        $("#progress").change(function() {
+            var pourcentage = $("#progress").val();
+            $("progress").val(pourcentage);
+        });
+    </script>
 </body>
 </html>

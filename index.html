@@ -23,9 +23,9 @@
         <summary>Element déroulant 3</summary>
         <div>C'est un élément qui se déroule !</div>
     </details>
-
     <br><br>
-    <dialog open>
+    <button id="button">Ouvrir le dialogue</button>
+    <dialog>
         <p>Ceci est une boite de dialogue</p>
         <input type="button" value="OK">
     </dialog>
@@ -34,6 +34,12 @@
         $(document).ready(function() {
             $("input[type=button]").click(function() {
                 $("dialog").removeAttr("open");
+                $("#button").removeAttr("disabled").css("cursor", "pointer");;
+            });
+
+            $("#button").click(function() {
+                $("dialog").attr("open", "");
+                $("#button").attr("disabled", "").css("cursor", "not-allowed");
             });
         });
         $("#progress").mousemove(function() {
